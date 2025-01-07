@@ -1,0 +1,194 @@
+:root {
+    --background-dark: #121212;
+    --card-bg: #1e1e1e;
+    --primary-dark: #2e3a59;
+    --primary-light: #3b4a6b;
+    --primary: #4a5d87;
+    --secondary: #b0bec5;
+    --text-light: #e0e0e0;
+    --button-bg: #4caf50;
+    --button-hover: #66bb6a;
+    --button-text: #ffffff;
+    --error-color: #e57373;
+  }
+  
+  body {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+  }
+  
+  h1 {
+    text-align: center;
+    color: var(--text-light);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 680px;
+  }
+  
+  h1,
+  .container,
+  .output {
+    margin: 20px auto;
+  }
+  
+  label,
+  legend {
+    font-weight: bold;
+    color: var(--secondary);
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--button-bg);
+    border: 2px solid var(--button-hover);
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: var(--button-text);
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  fieldset {
+    border: 1px solid var(--primary-dark);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--card-bg);
+    margin-bottom: 15px;
+  }
+  
+  legend {
+    color: var(--text-light);
+  }
+  
+  label,
+  button,
+  input,
+  select {
+    margin-bottom: 10px;
+  }
+  
+  input {
+    background-color: var(--card-bg);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 8px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 8px var(--primary-light);
+    outline: none;
+  }
+  
+  .output {
+    border: 2px solid var(--primary);
+    padding: 10px;
+    text-align: center;
+    background-color: var(--card-bg);
+    color: var(--text-light);
+    border-radius: 10px;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .output span {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .surplus {
+    color: var(--error-color);
+  }
+  
+  .deficit {
+    color: var(--button-bg);
+  }
+  
+  /* Controls Styling */
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .controls span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Buttons in a single line */
+  .controls button {
+    flex: 1;
+    max-width: 150px;
+  }
+  
+  /* Dropdown Styling */
+  .controls select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--primary-dark);
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    color: var(--text-light);
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e0e0e0'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 1em;
+  }
+  
+  .controls select:hover {
+    background-color: var(--primary-light);
+    border-color: var(--button-hover);
+  }
+  
+  .controls select:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 8px var(--primary-light);
+    outline: none;
+  }
+  
+  /* Dropdown option styling */
+  .controls select option {
+    background-color: var(--card-bg);
+    color: var(--text-light);
+    padding: 5px;
+    font-weight: normal;
+  }
+  
